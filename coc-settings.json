@@ -1,0 +1,15 @@
+{
+  "codeLens.enable": true,
+  "solargraph.useBundler": true,
+  "languageserver": {
+    "elixir_ls": {
+      "command": "/Users/jonesvitolo/Projects/studies/elixir/elixir-ls/release/language_server.sh",
+      "filetypes": ["elixir", "eelixir"],
+      "rootPatterns": ["mix.exs"]
+    },
+    "golang": {
+      "command": "gopls",
+      "filetypes": ["go"]
+    }
+  }
+}
