@@ -31,6 +31,7 @@ Plug 'elixir-editors/vim-elixir' " https://github.com/elixir-editors/vim-elixir
 Plug 'mhinz/vim-mix-format'
 
 Plug 'diepm/vim-rest-console'
+Plug 'ervandew/supertab'
 
 Plug 'https://github.com/mhinz/vim-startify' " {{{
   let g:startify_change_to_vcs_root = 1
