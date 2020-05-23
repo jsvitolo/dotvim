@@ -19,6 +19,14 @@ Plug 'ap/vim-css-color'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-journal'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'nightsense/forgotten'
+Plug 'zaki/zazen'
+
 " Functionalities
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
@@ -125,6 +133,12 @@ function! ColorDracula()
     IndentLinesEnable
 endfunction
 
+" Seoul256 Mode (Dark & Light)
+function! ColorSeoul256()
+    let g:airline_theme='silver'
+    color seoul256
+    IndentLinesDisable
+endfunction
 
 
 """ Custom Mappings
@@ -133,6 +147,7 @@ let mapleader=","
 nmap <leader>q :NERDTreeToggle<CR>
 nmap \ <leader>q
 nmap <leader>e1 :call ColorDracula()<CR>
+nmap <leader>e2 :call ColorSeoul256()<CR>
 
 " Remap for format selected region
 " Remap for format selected region
@@ -144,6 +159,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+nmap <leader>w :TagbarToggle<CR>
+nmap <leader>f :Files<CR>
+nmap <leader>g :Goyo<CR>
+nmap <leader>r :Ag<CR>
 
 " startfy
 " `SPC l s` - save current session
